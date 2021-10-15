@@ -5,40 +5,35 @@
 #
 
 # Name of this project
-name: ""
+name: "DynamoDB AWS Terraform module"
 
 # Short description of this project
 description: |-
-  Add here
+  A bare bones AWS DynamoDB module to provision the basic database.
 
 # Canonical GitHub repo
-github_repo: osodevops/some-repo
+github_repo: osodevops/aws-terraform-dynamodb
 
 # How to use this project
 usage: |-
-  ### Requirements
-  None.
+  ### Inputs
 
-  ### Role Variables
-  Some information
-  ```yaml
-    ---
-  ```
+    | Name | Description | Type | Default | Required |
+    |------|-------------|------|---------|:--------:|
+    | <a name="input_point_in_time_recovery"></a> [point\_in\_time\_recovery](#input\_point\_in\_time\_recovery) | n/a | `bool` | `true` | no |
+    | <a name="input_server-side-encryption"></a> [server-side-encryption](#input\_server-side-encryption) | n/a | `bool` | `true` | no |
+    | <a name="input_table"></a> [table](#input\_table) | n/a | `map(any)` | n/a | yes |
+    | <a name="input_ttl_enabled"></a> [ttl\_enabled](#input\_ttl\_enabled) | n/a | `bool` | `false` | no |
+    | <a name="input_common_tags"></a> [common\_tags](#input\_common\_tags) | This is to help you add tags to your cloud objects | `map(any)` | n/a | yes |
 
-# Example usage
-examples: |-
-  Follow this example
-  ```yaml
-      ---
-  ```
+  ## Outputs
 
-related:
-  - name: ""
-    description: ""
-    url: "https://github.com/osodevops/"
+    | Name | Description |
+    |------|-------------|
+    | <a name="output_dynamodb"></a> [dynamodb](#output\_dynamodb) | n/a |
 
 # References
 references:
-  - name: ""
-    description: ""
-    url: "https://"
+  - name: "Amazon DynamoDB"
+    description: "Fast, flexible NoSQL database "
+    url: "https://aws.amazon.com/dynamodb/"
